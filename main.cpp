@@ -1,6 +1,21 @@
 #include <iostream>
 
+#include "person.h"
+
+using std::cout;
+using std::endl;
+
+void PrintPerson(Person p);
+
+
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Person d("Daniel San");
+    PrintPerson(d);
     return 0;
+}
+
+
+void PrintPerson(Person p){
+    cout << p.ToString() << endl;
 }

@@ -15,8 +15,11 @@ private:
     int _friendLevel;
 public:
     Person(const string& name);
+    // Rule of three: Copy Ctor, Copy Assignment Op., Destructor
+    Person(const Person& person);
+    const Person& operator=(const Person&);
     ~Person();
-    string ToString();
+    string ToString()const;
     void IncreaseFriendLevel(int delta);
     int GetFriendLevel()const;
 };
